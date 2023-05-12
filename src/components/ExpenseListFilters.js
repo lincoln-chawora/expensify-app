@@ -32,7 +32,7 @@ export class ExpenseListFilters extends React.Component {
     render() {
         return (
             <div className="filters">
-                <h4>Filters</h4>
+                <h3>Filters</h3>
                 <input type="text" value={this.props.filters.text} onChange={this.onTextChange}/>
 
                 <DateRangePicker

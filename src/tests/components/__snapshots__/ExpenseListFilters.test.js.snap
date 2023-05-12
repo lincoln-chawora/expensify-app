@@ -4,9 +4,9 @@ exports[`Should render expense list filters correctly 1`] = `
 <div
   className="filters"
 >
-  <h4>
+  <h3>
     Filters
-  </h4>
+  </h3>
   <input
     onChange={[Function]}
     type="text"
@@ -122,9 +122,9 @@ exports[`Should render expense list filters with alt data correctly 1`] = `
 <div
   className="filters"
 >
-  <h4>
+  <h3>
     Filters
-  </h4>
+  </h3>
   <input
     onChange={[Function]}
     type="text"
