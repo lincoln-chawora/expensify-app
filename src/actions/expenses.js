@@ -56,6 +56,16 @@ export const editExpense = (id, updates) => ({
     updates
 })
 
+export const startEditExpense = (id, updates) => {
+    return (dispatch) => {
+        return db.ref(`expenses/${id}`).update(updates).then( () => {
+            dispatch(editExpense(id, updates))
+        }).catch((e) => {
+            console.log('Unable to edit expense', e);
+        });
+    }
+};
+
 // SET_EXPENSES
 export const setExpenses = (expenses) => ({
     type: 'SET_EXPENSES',

@@ -43,11 +43,8 @@ export { firebase, db as default };
 //     console.log(snapshot.key, snapshot.val())
 // });
 
-// db.ref('expenses').push({
-//     description: "Rent",
-//     note: "Mortgage monthly payment",
-//     amount: 1067,
-//     createdAt: moment.now()
+// db.ref('expenses/-NVrOK61QEC-d5a7eUZn').update({
+//     note: "Water payment (none meter)",
 // })
 //
 // db.ref('expenses').push({

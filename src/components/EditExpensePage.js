@@ -1,15 +1,15 @@
 import React from "react";
 import {connect} from "react-redux";
 import ExpenseForm from "./ExpenseForm";
-import {addExpense, editExpense, startRemoveExpense} from "../actions/expenses";
+import {startAddExpense, startRemoveExpense, startEditExpense} from "../actions/expenses";
 
 export class EditExpensePage extends React.Component {
     onSubmit = (expense) => {
         if (this.props.expense) {
             const expenseId = this.props.expense.id;
-            this.props.editExpense(expenseId, expense)
+            this.props.startEditExpense(expenseId, expense)
         } else {
-            this.props.addExpense(expense);
+            this.props.startAddExpense(expense);
         }
 
         // Redirect to dashboard on from submit. (prop.history comes from react router)
@@ -44,8 +44,8 @@ const mapStateToProps = (state, props) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        editExpense: (id, expense) => dispatch(editExpense(id, expense)),
-        addExpense: (expense) => dispatch(addExpense(expense)),
+        startEditExpense: (id, expense) => dispatch(startEditExpense(id, expense)),
+        startAddExpense: (expense) => dispatch(startAddExpense(expense)),
         startRemoveExpense: (id) => dispatch(startRemoveExpense(id))
     }
 }
