@@ -2,6 +2,7 @@ import React from "react";
 import {connect} from "react-redux";
 import ExpenseForm from "./ExpenseForm";
 import {startAddExpense, startRemoveExpense, startEditExpense} from "../actions/expenses";
+import Heading from "./Heading";
 
 export class EditExpensePage extends React.Component {
     onSubmit = (expense) => {
@@ -22,12 +23,16 @@ export class EditExpensePage extends React.Component {
     render() {
         return (
             <div>
-                <ExpenseForm
-                    expense={this.props.expense}
-                    onSubmit={this.onSubmit}
-                />
+                <Heading title="Edit Expense" />
+                <div className="container">
 
-                <button className="remove-expense" onClick={this.onRemove}>Delete</button>
+                    <ExpenseForm
+                        expense={this.props.expense}
+                        onSubmit={this.onSubmit}
+                    />
+
+                    <button className="btn secondary-btn" onClick={this.onRemove}>Delete Expense</button>
+                </div>
             </div>
         )
     }

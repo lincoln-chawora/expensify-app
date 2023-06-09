@@ -1,0 +1,44 @@
+.heading {
+  background-color: #f4f4f4;
+  padding: 2rem 0;
+
+  h1 {
+    font-weight: lighter;
+    margin: 0;
+  }
+
+  .summary {
+    margin-top: 2rem;
+  }
+}
+
+.expenses-list {
+  margin-top: 2rem;
+  border: 1px solid lightgray;
+
+  &--header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+    padding: 1rem;
+    background-color: #f4f4f4;
+  }
+
+  &--content {
+    padding: 1rem;
+
+    &.empty {
+      text-align: center;
+    }
+  }
+
+  &--item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:not(:first-child) {
+      margin-top: 1rem;
+    }
+  }
+}

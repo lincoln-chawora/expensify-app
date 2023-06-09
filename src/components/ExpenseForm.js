@@ -63,7 +63,7 @@ export default class ExpenseForm extends React.Component {
     }
     render() {
         return (
-            <div>
+            <div className="container">
                 {this.state.error && <p className="error">{this.state.error}</p>}
                 <form onSubmit={this.onSubmit}>
                     <input
@@ -96,7 +96,7 @@ export default class ExpenseForm extends React.Component {
                               value={this.state.note}
                               onChange={this.onNoteChange}
                     ></textarea>
-                    <button>{ this.state.hasData ? 'Save' : 'Add'} Expense</button>
+                    <button className="btn primary-btn">{ this.state.hasData ? 'Save' : 'Add'} Expense</button>
                 </form>
             </div>
         )
